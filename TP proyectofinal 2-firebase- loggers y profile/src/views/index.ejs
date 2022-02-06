@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productos</title>
+</head>
+<body>
+  <h1>Productos:</h1>
+  <ul>
+    <% for (var i = 0; i < productos.length ; i++) { %>
+        <li> <%= productos[i].id %>, <%= productos[i].name %> </li>
+    <% } %>
+  </ul>
+  <h1>Carritos:</h1>
+  <ul>
+    <% for (var i = 0; i < carritos.length ; i++) { %>
+        <li> 
+          id: <%= carritos[i]._id ? carritos[i]._id : carritos[i].id %>
+          <br>
+          nro productos: <%= carritos[i].productos ? carritos[i].productos.length : 0 %> 
+          <br>
+          <ul>
+            <% if(carritos[i].productos) { %>
+              <% for (var j = 0; j < carritos[i].productos.length ; j++) { %>
+                <li><%= carritos[i].productos[j].name %></li>  
+              <% } %>
+            <% } %>
+          </ul>
+        </li>
+    <% } %>
+  </ul>
+  <h3>Formulario de Creación</h3>
+
+  <form action="api/productos" method="post">
+    <input type="text" name="id" placeholder="id">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="thumbnail" placeholder="thumbnail">
+    <input type="text" name="price" placeholder="price">
+    <button type="submit">Agregar</button>
+  </form>
+
+
+  <h3>Formulario de edición</h3>
+  <form action="api/productos?edit=true" method="post">
+    <input type="text" name="id" value="">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="thumbnail" placeholder="thumbnail">
+    <input type="text" name="price" placeholder="price">
+    <button type="submit">Editar</button>
+  </form>
+
+  <h3>Crear carrito</h3>
+  <form action="api/carrito" method="post">
+    <button type="submit">Crear</button>
+  </form>
+
+  <h3>Agregar producto al carrito 1</h3>
+  <form action="api/carrito/product" method="post">
+    <input type="text" name="id_producto" placeholder="id producto">
+    <input type="text" name="id_carrito" placeholder="id carrito">
+    <button type="submit">Agregar</button>
+  </form>
+</body>
+</html>

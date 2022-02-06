@@ -1,0 +1,16 @@
+config:
+  environments:
+    local:
+      target: "http://127.0.0.1:8080"
+      phases:
+        - duration: 30
+          arrivalRate: 10
+          maxVusers: 50
+scenarios:
+  - flow:
+    - log: "Current environment is set to: {{ $environment }}"
+  - flow:
+    - get:
+        url: "/"
+    - log: "Trying to access /"
+

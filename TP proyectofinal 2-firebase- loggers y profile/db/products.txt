@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "payload": {
+      "id": 2,
+      "timestamp": 1635552312932,
+      "name": "Globo",
+      "code": "CODGlobo",
+      "price": 122.45,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+      "stock": 0
+    }
+  },
+  {
+    "id": 2,
+    "payload": {
+      "id": 2,
+      "timestamp": 1635552312931,
+      "name": "manzana",
+      "code": "CODGlobo",
+      "price": 122.45,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+      "stock": 0
+    }
+  },
+  {
+    "id": 3,
+    "payload": {
+      "id": 3,
+      "timestamp": 1635552312933,
+      "name": "regla",
+      "code": "CODGlobo",
+      "price": 122.45,
+      "thumbnail": "https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png",
+      "stock": 0
+    }
+  },
+  {
+    "productId": 18,
+    "quantity": 1,
+    "id": 4
+  }
+]
